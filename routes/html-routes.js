@@ -15,6 +15,8 @@ module.exports = function(app) {
   // index route loads view.html
   app.get("/", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/blog.html"));
+    //new main html page (will show most recent posts)
+    //must have link for search and log in/view
   });
 
   // cms route loads cms.html
