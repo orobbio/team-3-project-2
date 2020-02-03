@@ -24,6 +24,11 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/cms.html"));
   });
 
+  // cms route loads cms.html
+  app.get("/postData", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/postData.html"));
+  });
+
   // blog route loads blog.html
   app.get("/blog", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/blog.html"));

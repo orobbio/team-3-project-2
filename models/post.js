@@ -15,10 +15,6 @@ module.exports = function(sequelize, DataTypes) {
     category: {
       type: DataTypes.STRING,
       defaultValue: "Personal"
-    },
-    date: {
-      type: DataTypes.DATE,
-      allowNull: false
     }
   });
 

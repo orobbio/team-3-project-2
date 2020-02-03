@@ -78,7 +78,7 @@ $(document).ready(function() {
     newPostTitle.text(post.title + " ");
     newPostBody.text(post.body);
     var formattedDate = new Date(post.createdAt);
-    formattedDate = moment(formattedDate).format("MMMM Do YYYY, h:mm:ss a");
+    formattedDate = moment(formattedDate).format("MMMM Do YYYY");
     newPostDate.text(formattedDate);
     newPostTitle.append(newPostDate);
     newPostCardHeading.append(deleteBtn);
@@ -109,7 +109,7 @@ $(document).ready(function() {
       .parent()
       .parent()
       .data("post");
-    window.location.href = "/cms?post_id=" + currentPost.id;
+    window.location.href = "/postData?post_id=" + currentPost.id;
   }
 
   // This function displays a message when there are no posts
