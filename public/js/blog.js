@@ -46,9 +46,11 @@ $(document).ready(function() {
     var postsToAdd = [];
     for (var i = 0; i < posts.length; i++) {
       postsToAdd.push(createNewRow(posts[i]));
+      var space = $('<hr>');
+      postsToAdd.push(space)
     }
     blogContainer.append(postsToAdd);
-  }
+    }
 
   // This function constructs a post's HTML
   function createNewRow(post) {
@@ -75,8 +77,11 @@ $(document).ready(function() {
     var newPostCardBody = $("<div>");
     newPostCardBody.addClass("card-body");
     var newPostBody = $("<p>");
+    var bodyText = post.body;
+    var newPostName = $("<p>");
     newPostTitle.text(post.title + " ");
-    newPostBody.text(post.body);
+    newPostBody.html(bodyText.replace(/\r?\n/g, '<br />'));
+    newPostName.text(post.userName);
     var formattedDate = new Date(post.createdAt);
     formattedDate = moment(formattedDate).format("MMMM Do YYYY");
     newPostDate.text(formattedDate);
@@ -86,6 +91,7 @@ $(document).ready(function() {
     newPostCardHeading.append(newPostTitle);
     newPostCardHeading.append(newPostCategory);
     newPostCardBody.append(newPostBody);
+    newPostCardBody.append(newPostName);
     newPostCard.append(newPostCardHeading);
     newPostCard.append(newPostCardBody);
     newPostCard.data("post", post);

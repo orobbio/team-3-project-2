@@ -16,6 +16,7 @@ $(document).ready(function() {
     var bodyInput = $("#body");
     var titleInput = $("#title");
     var cmsForm = $("#cms");
+    var userNameInput = $('#userName');
     var postCategorySelect = $("#category");
     // Giving the postCategorySelect a default value
     postCategorySelect.val("TV Shows");
@@ -63,6 +64,8 @@ $(document).ready(function() {
           titleInput.text(data.title);
           bodyInput.html(test.replace( /\n/g, '<br>' ));
           postCategorySelect.text(data.category);
+          userNameInput.text(data.userName);
+
           // If we have a post with this id, set a flag for us to know to update the post
           // when we hit submit
           updating = true;

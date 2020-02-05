@@ -16,6 +16,7 @@ $(document).ready(function() {
   var bodyInput = $("#body");
   var titleInput = $("#title");
   var cmsForm = $("#cms");
+  var userNameInput = $('#userName');
   var postCategorySelect = $("#category");
   // Giving the postCategorySelect a default value
   postCategorySelect.val("TV Shows");
@@ -30,7 +31,8 @@ $(document).ready(function() {
     var newPost = {
       title: titleInput.val().trim(),
       body: bodyInput.val().trim(),
-      category: postCategorySelect.val()
+      category: postCategorySelect.val(),
+      userName: userNameInput.val().trim()
     };
 
     console.log(newPost);
