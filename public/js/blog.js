@@ -4,7 +4,7 @@ $(document).ready(function() {
   var postCategorySelect = $("#category");
   // Click events for the edit and delete buttons
   $(document).on("click", "button.delete", handlePostDelete);
-  $(document).on("click", "button.edit", handlePostEdit);
+  $(document).on("click", "button.view", handlePostView);
   postCategorySelect.on("change", handleCategoryChange);
   var posts;
 
@@ -58,18 +58,23 @@ $(document).ready(function() {
     newPostCard.addClass("card border-warning row row-cols-1 row-cols-md-2");
     var newPostCardHeading = $("<div>");
     newPostCardHeading.addClass("card-header card-img-top");
-    var deleteBtn = $("<button>");
-    deleteBtn.text("x");
-    deleteBtn.addClass("delete btn btn-danger");
-    var editBtn = $("<button>");
-    editBtn.text("EDIT");
-    editBtn.addClass("edit btn btn-default");
+    
+    var viewBtn = $("<button>");
+    viewBtn.text("View Post");
+    viewBtn.addClass("view btn btn-default");
     var newPostTitle = $("<h2>");
-    var newPostDate = $("<small>");
-    var newPostCategory = $("<h5>");
+    var newPostDate = $("<p>");
+    var newPostCategory = $("<p>");
     newPostCategory.text(post.category);
     newPostCategory.css({
       float: "right",
+      "font-weight": "700",
+      "margin-top":
+      "-15px"
+    });
+
+    viewBtn.css({
+      float: "left",
       "font-weight": "700",
       "margin-top":
       "-15px"
@@ -83,15 +88,17 @@ $(document).ready(function() {
     newPostBody.html(bodyText.replace(/\r?\n/g, '<br />'));
     newPostName.text(post.userName);
     var formattedDate = new Date(post.createdAt);
-    formattedDate = moment(formattedDate).format("MMMM Do YYYY");
-    newPostDate.text(formattedDate);
-    newPostTitle.append(newPostDate);
-    newPostCardHeading.append(deleteBtn);
-    newPostCardHeading.append(editBtn);
+    var newDate = moment(formattedDate).fromNow(); ;
+    newPostDate.html(newDate + " - " + post.userName);
+    
     newPostCardHeading.append(newPostTitle);
+    newPostCardHeading.append(newPostDate);
+    newPostCardHeading.append('<br>');
     newPostCardHeading.append(newPostCategory);
+    newPostCardHeading.append(viewBtn);
+    //newPostCardHeading.append(newPostDate);
     newPostCardBody.append(newPostBody);
-    newPostCardBody.append(newPostName);
+   //newPostCardBody.append(newPostName);
     newPostCard.append(newPostCardHeading);
     newPostCard.append(newPostCardBody);
     newPostCard.data("post", post);
@@ -110,7 +117,7 @@ $(document).ready(function() {
 
   // This function figures out which post we want to edit and takes it to the
   // Appropriate url
-  function handlePostEdit() {
+  function handlePostView() {
     var currentPost = $(this)
       .parent()
       .parent()

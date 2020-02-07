@@ -6,14 +6,12 @@ form#cms {
   margin-top: 50px;
 }
 
-#cms textarea {
-  resize: none;
+form#postData {
+  margin-top: 50px;
 }
 
-.card-header button.delete,
-button.edit {
-  float: right;
-  margin: 5px;
+#cms textarea {
+  resize: none;
 }
 
 .author-container {
@@ -41,39 +39,54 @@ button.edit {
 .top-30 {
   margin-top: 30px;
 }
+
 body {
   font-family: 'Open Sans Light', sans-serif;
   font-size: 14px;
   color: rgb(233, 162, 55);
-  background-color:black;
+  background-color: black;
   text-shadow: black;
-  
+
 
 }
 
 a {
-  color:blanchedalmond ;  
+  color: blanchedalmond;
 }
 
 a:hover {
-  color: #989c9e;    
+  color: #989c9e;
 }
 
-.card{
+.card {
   color: black;
-    margin-bottom: 20px;  
+  margin-bottom: 20px;
 }
 
-.cmsBorder{border-width: 2px;
-border-color: blanchedalmond;}
+.cmsBorder {
+  border-width: 2px;
+  border-color: blanchedalmond;
+}
 
 div {
   display: block;
 }
-.picture{
+
+.picture {
   width: auto;
   height: 100%;
 }
-label{font-size: 12pt;
-color:blanchedalmond
-font-weight: bolder;}
+
+label {
+  font-size: 12pt;
+  color: blanchedalmond;
+  font-weight: bolder;
+}
+
+#titlePD {
+  text-align: center;
+}
+
+.card-body {
+  max-height: 100px
+}
