@@ -47,13 +47,14 @@ body {
   color: rgb(233, 162, 55);
   background-color:black;
   text-shadow: black;
-  t
+  
 
 }
 
 a {
-  color:  blanchedalmond;    
+  color:blanchedalmond ;  
 }
+
 a:hover {
   color: #989c9e;    
 }

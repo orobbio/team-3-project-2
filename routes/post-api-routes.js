@@ -50,7 +50,8 @@ module.exports = function(app) {
     db.Post.create({
       title: req.body.title,
       body: req.body.body,
-      category: req.body.category
+      category: req.body.category,
+      userName: req.body.userName
     })
       .then(function(dbPost) {
         res.json(dbPost);
