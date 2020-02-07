@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "root",
-    "password": "root",
-    "database": "blogger",
-    "host": "127.0.0.1",
+    "username": "xzocq8nlyu92qlv2",
+    "password": "xif3pipdbwo8z1um",
+    "database": "btowisjds4u22t3n",
+    "host": "d13xat1hwxt21t45.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "port": 3306,
     "dialect": "mysql"
   },

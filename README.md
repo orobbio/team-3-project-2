@@ -39,3 +39,4 @@ Schema.sql
 Server.js
 1. Meet good quality coding standards (indentation, scoping, naming). We created good clean beautified code and scoped our files using the MVC structure.
 2. IF we use an API: Must not expose sensitive API key information on the server, see Protecting-API-Keys-In-Node.md We have a config.js file that holds a secret API key using a dotenv file. Future development: RESTful API usage. (www.restapitutorial.com)    
+Config .json file set up for jaws DB 
