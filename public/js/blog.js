@@ -3,7 +3,7 @@ $(document).ready(function() {
   var blogContainer = $(".blog-container");
   var postCategorySelect = $("#category");
   // Click events for the edit and delete buttons
-  $(document).on("click", "button.delete", handlePostDelete);
+  //$(document).on("click", "button.delete", handlePostDelete);
   $(document).on("click", "button.view", handlePostView);
   postCategorySelect.on("change", handleCategoryChange);
   var posts;
@@ -27,15 +27,15 @@ $(document).ready(function() {
   }
 
   // This function does an API call to delete posts
-  function deletePost(id) {
-    $.ajax({
-      method: "DELETE",
-      url: "/api/posts/" + id
-    })
-      .then(function() {
-        getPosts(postCategorySelect.val());
-      });
-  }
+  // function deletePost(id) {
+  //   $.ajax({
+  //     method: "DELETE",
+  //     url: "/api/posts/" + id
+  //   })
+  //     .then(function() {
+  //       getPosts(postCategorySelect.val());
+  //     });
+  // }
 
   // Getting the initial list of posts
   getPosts();
