@@ -44,8 +44,10 @@ button.edit {
 body {
   font-family: 'Open Sans Light', sans-serif;
   font-size: 14px;
-  color: blanchedalmond;
+  color: rgb(233, 162, 55);
   background-color:black;
+  text-shadow: black;
+  t
 
 }
 
@@ -58,6 +60,19 @@ a:hover {
 
 .card{
   color: black;
+    margin-bottom: 20px;  
 }
+
 .cmsBorder{border-width: 2px;
 border-color: blanchedalmond;}
+
+div {
+  display: block;
+}
+.picture{
+  width: auto;
+  height: 100%;
+}
+label{font-size: 12pt;
+color:blanchedalmond
+font-weight: bolder;}

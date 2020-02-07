@@ -53,9 +53,9 @@ $(document).ready(function() {
   // This function constructs a post's HTML
   function createNewRow(post) {
     var newPostCard = $("<div>");
-    newPostCard.addClass("card");
+    newPostCard.addClass("card border-warning row row-cols-1 row-cols-md-2");
     var newPostCardHeading = $("<div>");
-    newPostCardHeading.addClass("card-header");
+    newPostCardHeading.addClass("card-header card-img-top");
     var deleteBtn = $("<button>");
     deleteBtn.text("x");
     deleteBtn.addClass("delete btn btn-danger");
