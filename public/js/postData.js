@@ -60,8 +60,9 @@ $(document).ready(function () {
         bodyInput.html(test.replace(/\n/g, '<br>'));
         postCategorySelect.text(data.category);
 
+  
         var formattedDate = new Date(data.createdAt);
-        formattedDate = moment(formattedDate).startOf('hour').fromNow();;
+        formattedDate = moment(formattedDate).fromNow();;
         userNameInput.html(formattedDate + " - " + data.userName);
 
 
