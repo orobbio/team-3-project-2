@@ -3,7 +3,7 @@ $(document).ready(function() {
   var url = window.location.search;
   var postId;
   // Sets a flag for whether or not we're updating a post to be false initially
-  //var updating = false;
+  var updating = false;
 
   // If we have this section in our url, we pull out the post id from the url
   // In localhost:8080/cms?post_id=1, postId is 1
