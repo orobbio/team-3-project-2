@@ -11,7 +11,7 @@ Project 2 Requirements:
 3. Have both GET and POST routes for retrieving and adding new data
 4. Be deployed using Heroku (with Data); We successfully deployed the project to Heroku. 
 5. Utilize at least one new library, package, or technology that we haven’t used: 
-6. Mocha/CHAI (npm install package)
+6. Mocha/CHAI (npm install package) Played with this package to see what it can do
 7. Materialize (works in conjunction with bootstrap on front-end)
 8. Have a polished frontend / UI; We used Bootstrap, CSS to style. We wanted our site to look inviting while displaying an image relative to our app.
 Have folder structure that meets MVC Paradigm:
